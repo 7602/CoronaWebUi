@@ -1,0 +1,1098 @@
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+<link rel="stylesheet" href="css/webui-components-all.min.css"> 
+<link rel="stylesheet" type="text/css" href="style_New1.css">
+<style type="text/css">
+  
+</style>
+</head>
+<body>
+<nav class="nav-sm info height-md" id="navbar1">
+    <div class="nav-logo info pad-left-md pad-top-md margin-rigth-xxl ">WORLD<span class="nav-component color-dark">O</span>METER</div>
+    <div class="nav-menu info move-right pad-top-sm">
+      <div ><a href="#corona">Coronavirus</a></div>
+      <div><a href="#population">Population</a></div>
+      
+    </div>   
+    <div class="nav-button-sm" id="navToggle1"></div> 
+  </nav>
+
+<!-- -->
+<div style="font-size:13px; color:#999; margin-right:20px; text-align:right">Last updated: February 06, 2021, 23:34 GMT</div>
+<div class="label-counter text-center" id="page-top"><a href="#"><img id="img" src="Covid.png" ></a></div>
+
+<div style="margin-top:20px; text-align:center; font-size:14px"><a href="/coronavirus/coronavirus-cases/"> </a><a href="/coronavirus/worldwide-graphs/">Graphs</a> - <a href="#countries">Countries</a> - <a href="#news">News</a></div>
+
+
+   <section class="main" >
+   <div class="toggle-container" data-transition-duration="1000" data-transition-type="collapse" id="visible">
+      <div class="table-row margin-left-md">
+      <div class="table-col-6" style="border:none">
+        <button data-target="#panel1" class="toggle-activator  menu-button  transition-long  height-md">Coronavirus Cases</button>
+      </div>
+      <div class="table-col-6 " style="border:none"> 
+        <button data-target="#panel2" class="toggle-activator  menu-button  transition-long  height-md">Deaths</button>
+      </div> 
+      <div class="table-col-6 " style="border:none">   
+        <button data-target="#panel3" class="toggle-activator  menu-button  transition-long height-md">Recovered</button>
+      </div>
+      </div>
+      <div class="table-row margin-left-md">
+        <div class="table-col-6" style="border:none">
+          <div id="panel1" class="toggle-item hidden">
+            <div class="panel border-sm border-muted width-full text-center">
+              <p>106 783 422</p>
+            </div>
+            <div class="row-spacing-xs"></div> 
+          </div>
+        </div>
+        <div class="table-col-6" style="border:none">
+          <div id="panel2" class="toggle-item hidden">
+            <div class="panel border-sm border-muted width-full text-center">
+              <p>106 783 422</p>
+            </div>
+            <div class="row-spacing-xs"></div>
+          </div>
+        </div> 
+        <div class="table-col-6" style="border:none">
+          <div id="panel3" class="toggle-item hidden">
+            <div class="panel border-sm border-muted width-full text-center">
+              <p>106 783 422</p>
+            </div>
+            <div class="row-spacing-xs"></div>
+          </div>
+        </div>
+      </div>  
+    </div>
+      
+  
+  <!-- hidden -->
+  <div class="toggle-container" data-transition-duration="1000" data-transition-type="collapse" id="hiddendiv">
+    <div class="content-col-20">
+      <button data-target="#panel1hidden" class="toggle-activator  menu-button  transition-long background-default height-md">Coronavirus Cases</button>
+      <div id="panel1hidden" class="toggle-item hidden">
+        <div class="panel border-sm border-accent-1 width-full">
+         
+          <p>156685238979465</p>
+        </div>
+        <div class="row-spacing-xs"></div>
+      </div>
+      <div class="row-spacing-xs"></div>     
+      <button data-target="#panel2hidden" class="toggle-activator  menu-button  transition-long height-md background-danger">Deaths</button>
+      <div id="panel2hidden" class="toggle-item">
+        <div class="panel border-sm border-accent-1 width-full">
+          
+          <p>788965198585</p>
+        </div>
+        <div class="row-spacing-xs"></div>
+      </div>
+      <div class="row-spacing-xs"></div>
+      <button data-target="#panel3hidden" class="toggle-activator  menu-button  transition-long height-md background-success">Recovered</button>
+      <div id="panel3hidden" class="toggle-item hidden">
+        <div class="panel border-sm border-accent-1 width-full">
+          
+          <p>78896415368746</p>
+        </div>
+        <div class="row-spacing-xs"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="toggle-container " id="pub" data-transition-duration="1000" data-close-external="#offCanvasRight" data-close-external="#offCanvasLeft" >  
+  <div id="offCanvasLeft" class="toggle-item off-canvas-left dock-top-left accent-1-dark width-xl height-full layer-top">   
+    <img src="death.png" class="width-full height-full">
+  </div>
+
+  <div id="offCanvasRight" class="toggle-item off-canvas-right dock-top-right accent-1-dark width-xl height-full layer-top">   
+    <img src="active.png" class="width-full height-full">
+  </div>
+
+  <div class="form-row text-bold text-sm">
+    <div class="form-col-20 ">
+      <button type="button" data-target="#offCanvasRight" class="toggle-activator button-sm button-accent-1 " id="canvas1"> ACTIVE CASES</button>
+      <button type="button" data-target="#offCanvasLeft" class="toggle-activator  button-sm button-accent-1 move-right" id="canvas2">CLOSED CASES</button>
+    </div>
+  </div>  
+</div>
+</div><br>
+
+
+<br><br><br>
+<!--responsive prob-->
+<div class="row-spacing-md"></div>
+		<div class="row-spacing-xs"></div>
+
+		<div class="panel  rounded-sm">
+
+			<div class="content-row">
+				<div class="form-col-7 respond-bp-4-under" style="width: 100%; ">
+					<div class="content-row"  >
+						<div class="form-col-20 respond-bp-3-under gap-vertical-xs" >
+							<button type="button" id="commandTransitionRight" class="button-sm button-info rounded-sm col-spacing-right-xs">Move Right</button>
+							<button type="button" id="commandTransitionLeft" class="button-sm button-info rounded-sm col-spacing-right-xs">Move Left</button>
+						</div>
+					</div>
+<div id="corona" class="tabs">
+  <div class="control-group text-sm" style="margin-left: 55px">
+    <button type="button" id="butt" data-target="#all" class="tab-activator menu-button  menu-button-light transition-long rounded-top-sm " style="width: auto;height: 35px;"> All</button>
+    <button type="button" data-target="#eu" class="tab-activator menu-button menu-button-light transition-long rounded-top-sm " style="width: auto;height: 35px">Europe</button>
+    <button type="button" data-target="#na" class="tab-activator menu-button menu-button-light  transition-long rounded-top-sm " style="width: auto;height: 35px">North America</button>
+  </div>
+  <div class="tab-item primary border-sm border-accent-4 height-lg" id="all" style="height: auto;border: none;width:1350px;">
+    <div class="area" >
+     
+					<div class="content-row" >
+						<div id="tableau1"class="content-col-18 container height-lg  respond-bp-3-under" >
+							<div class="area   text-center top-initial left-initial"  id="transitionPanel" >
+								
+<div class="table"style="height: auto;background-color: white" >
+  <div class="table-row text-left color-dark"  >
+    <div class="table-col-2">Contry</div>
+    <div class="table-col-2">Total cases</div>
+    <div class="table-col-1">New Cases</div>
+    <div class="table-col-1">Total Deaths</div>
+    <div id="death"class="table-col-1">New Deaths</div>
+    <div class="table-col-2">Total Recovered</div>
+    <div class="table-col-2">Active Cases</div>
+    <div class="table-col-1">Serious, critical</div>
+    <div class="table-col-1">Tot Cases/ 1M pop</div>
+    <div class="table-col-1">Deaths/ 1M pop</div>
+    <div class="table-col-2">Total tests</div>
+    <div class="table-col-2">Tests/ 1M pop</div>
+    <div class="table-col-2">Population</div>
+  </div>
+  <div class="table-row text-left color-dark">
+    <div style="display:inline-block;" class="table-col-2 height-sm "><img style="width:15%" src="pays/us.png"> Usa </div>
+    <div class="table-col-2">27 700 700</div>
+    <div class="table-col-1"></div>
+    <div class="table-col-1">504450</div>
+    <div class="table-col-1"></div>
+    <div class="table-col-2">18 513 654</div>
+    <div class="table-col-2">9 711 640</div>
+    <div class="table-col-1">21 435</div>
+    <div class="table-col-1">89 400</div>
+    <div class="table-col-1">1 684</div>
+    <div class="table-col-2">326 509 814</div>
+    <div class="table-col-2">989 909</div>
+    <div class="table-col-2">323 182 690</div>
+  </div>
+  <div class="table-row text-left color-dark">
+    <div style="display:inline-block;" class="table-col-2 height-sm "><img style="width:15%" src="pays/es.png"> Spain </div>
+    <div class="table-col-2 ">27 700 700</div>
+    <div class="table-col-1"></div>
+    <div class="table-col-1">500 40</div>
+    <div class="table-col-1"></div>
+    <div class="table-col-2">18 513 654</div>
+    <div class="table-col-2">9 711 640</div>
+    <div class="table-col-1">21 435</div>
+    <div class="table-col-1">89 400</div>
+    <div class="table-col-1">1 684</div>
+    <div class="table-col-2">326 509 814</div>
+    <div class="table-col-2">989 909</div>
+    <div class="table-col-2">323 182 690</div>
+  </div>
+  <div class="table-row text-left color-dark">
+    <div style="display:inline-block;" class="table-col-2 height-sm "><img style="width:15%" src="pays/in.png"> India</div>
+    <div class="table-col-2">27 700 700</div>
+    <div class="table-col-1"></div>
+    <div class="table-col-1">500 40</div>
+    <div class="table-col-1"></div>
+    <div class="table-col-2">18 513 654</div>
+    <div class="table-col-2">9 711 640</div>
+    <div class="table-col-1">21 435</div>
+    <div class="table-col-1">89 400</div>
+    <div class="table-col-1">1 684</div>
+    <div class="table-col-2">326 509 814</div>
+    <div class="table-col-2">989 909</div>
+    <div class="table-col-2">323 182 690</div>
+  </div>
+  <div class="table-row text-left color-dark">
+    <div style="display:inline-block;" class="table-col-2 height-sm "><img style="width:15%" src="pays/br.png"> Brazil</div>
+    <div class="table-col-2">27 700 700</div>
+    <div class="table-col-1"></div>
+    <div class="table-col-1">500 40</div>
+    <div class="table-col-1"></div>
+    <div class="table-col-2">18 513 654</div>
+    <div class="table-col-2">9 711 640</div>
+    <div class="table-col-1">21 435</div>
+    <div class="table-col-1">89 400</div>
+    <div class="table-col-1">1 684</div>
+    <div class="table-col-2">326 509 814</div>
+    <div class="table-col-2">989 909</div>
+    <div class="table-col-2">323 182 690</div>
+  </div>
+  <div class="table-row text-left color-dark">
+    <div style="display:inline-block;" class="table-col-2 height-sm "><img style="width:15%" src="pays/ru.png"> Russia</div>
+    <div class="table-col-2">27 700 700</div>
+    <div class="table-col-1"></div>
+    <div class="table-col-1">500 40</div>
+    <div class="table-col-1"></div>
+    <div class="table-col-2">18 513 654</div>
+    <div class="table-col-2">9 711 640</div>
+    <div class="table-col-1">21 435</div>
+    <div class="table-col-1">89 400</div>
+    <div class="table-col-1">1 684</div>
+    <div class="table-col-2">326 509 814</div>
+    <div class="table-col-2">989 909</div>
+    <div class="table-col-2">323 182 690</div>
+  </div>
+  <div class="table-row text-left color-dark">
+    <div style="display:inline-block;" class="table-col-2 height-sm "><img style="width:15%" src="pays/it.png"> Italy</div>
+    <div class="table-col-2">27 700 700</div>
+    <div class="table-col-1"></div>
+    <div class="table-col-1">500 40</div>
+    <div class="table-col-1"></div>
+    <div class="table-col-2">18 513 654</div>
+    <div class="table-col-2">9 711 640</div>
+    <div class="table-col-1">21 435</div>
+    <div class="table-col-1">89 400</div>
+    <div class="table-col-1">1 684</div>
+    <div class="table-col-2">326 509 814</div>
+    <div class="table-col-2">989 909</div>
+    <div class="table-col-2">323 182 690</div>
+  </div>
+  <div class="table-row text-left color-dark">
+    <div style="display:inline-block;" class="table-col-2 height-sm "><img style="width:15%" src="pays/fr.png"> France</div>
+    <div class="table-col-2">27 700 700</div>
+    <div class="table-col-1"></div>
+    <div class="table-col-1">500 40</div>
+    <div class="table-col-1"></div>
+    <div class="table-col-2">18 513 654</div>
+    <div class="table-col-2">9 711 640</div>
+    <div class="table-col-1">21 435</div>
+    <div class="table-col-1">89 400</div>
+    <div class="table-col-1">1 684</div>
+    <div class="table-col-2">326 509 814</div>
+    <div class="table-col-2">989 909</div>
+    <div class="table-col-2">323 182 690</div>
+  </div>
+  <div class="table-row text-left color-dark">
+    <div style="display:inline-block;" class="table-col-2 height-sm "><img style="width:15%" src="pays/ma.png"> Morocco</div>
+    <div class="table-col-2">27 700 700</div>
+    <div class="table-col-1"></div>
+    <div class="table-col-1">500 40</div>
+    <div class="table-col-1"></div>
+    <div class="table-col-2">18 513 654</div>
+    <div class="table-col-2">9 711 640</div>
+    <div class="table-col-1">21 435</div>
+    <div class="table-col-1">89 400</div>
+    <div class="table-col-1">1 684</div>
+    <div class="table-col-2">326 509 814</div>
+    <div class="table-col-2">989 909</div>
+    <div class="table-col-2">323 182 690</div>
+  </div>
+  <div class="table-row text-left color-dark">
+    <div style="display:inline-block;" class="table-col-2 height-sm "><img style="width:15%" src="pays/ca.png"> Canada</div>
+    <div class="table-col-2">27 700 700</div>
+    <div class="table-col-1"></div>
+    <div class="table-col-1">500 40</div>
+    <div class="table-col-1"></div>
+    <div class="table-col-2">18 513 654</div>
+    <div class="table-col-2">9 711 640</div>
+    <div class="table-col-1">21 435</div>
+    <div class="table-col-1">89 400</div>
+    <div class="table-col-1">1 684</div>
+    <div class="table-col-2">326 509 814</div>
+    <div class="table-col-2">989 909</div>
+    <div class="table-col-2">323 182 690</div>
+  </div>
+  <div class="table-row text-left color-dark">
+    <div style="display:inline-block;" class="table-col-2 height-sm "><img style="width:15%" src="pays/tr.png"> Turkey</div>
+    <div class="table-col-2">27 700 700</div>
+    <div class="table-col-1"></div>
+    <div class="table-col-1">500 40</div>
+    <div class="table-col-1"></div>
+    <div class="table-col-2">18 513 654</div>
+    <div class="table-col-2">9 711 640</div>
+    <div class="table-col-1">21 435</div>
+    <div class="table-col-1">89 400</div>
+    <div class="table-col-1">1 684</div>
+    <div class="table-col-2">326 509 814</div>
+    <div class="table-col-2">989 909</div>
+    <div class="table-col-2">323 182 690</div>
+  </div>
+  <div class="table-row text-left color-dark">
+    <div style="display:inline-block;" class="table-col-2 height-sm "><img style="width:15%" src="pays/de.png"> Germany</div>
+    <div class="table-col-2">27 700 700</div>
+    <div class="table-col-1"></div>
+    <div class="table-col-1">500 40</div>
+    <div class="table-col-1"></div>
+    <div class="table-col-2">18 513 654</div>
+    <div class="table-col-2">9 711 640</div>
+    <div class="table-col-1">21 435</div>
+    <div class="table-col-1">89 400</div>
+    <div class="table-col-1">1 684</div>
+    <div class="table-col-2">326 509 814</div>
+    <div class="table-col-2">989 909</div>
+    <div class="table-col-2">323 182 690</div>
+  </div>
+  <div class="table-row text-left color-dark">
+    <div style="display:inline-block;" class="table-col-2 height-sm "><img style="width:15%" src="pays/ar.png"> Argentina</div>
+    <div class="table-col-2">27 700 700</div>
+    <div class="table-col-1"></div>
+    <div class="table-col-1">500 40</div>
+    <div class="table-col-1"></div>
+    <div class="table-col-2">18 513 654</div>
+    <div class="table-col-2">9 711 640</div>
+    <div class="table-col-1">21 435</div>
+    <div class="table-col-1">89 400</div>
+    <div class="table-col-1">1 684</div>
+    <div class="table-col-2">326 509 814</div>
+    <div class="table-col-2">989 909</div>
+    <div class="table-col-2">323 182 690</div>
+  </div>
+  <div class="table-row text-left color-dark">
+    <div style="display:inline-block;" class="table-col-2 height-sm "><img style="width:15%" src="pays/pl.png"> Poland</div>
+    <div class="table-col-2">27 700 700</div>
+    <div class="table-col-1"></div>
+    <div class="table-col-1">500 40</div>
+    <div class="table-col-1"></div>
+    <div class="table-col-2">18 513 654</div>
+    <div class="table-col-2">9 711 640</div>
+    <div class="table-col-1">21 435</div>
+    <div class="table-col-1">89 400</div>
+    <div class="table-col-1">1 684</div>
+    <div class="table-col-2">326 509 814</div>
+    <div class="table-col-2">989 909</div>
+    <div class="table-col-2">323 182 690</div>
+  </div>
+</div>
+</div></div></div>
+
+    </div>
+  </div>
+  <div class="tab-item primary border-sm border-accent-4 height-lg" id="eu" style="height: auto;border: none;width:1350px">
+    <div class="area" >
+     
+					<div class="content-row" >
+						<div id="tableau1"class="content-col-18 container height-lg  respond-bp-3-under" >
+							<div class="area   text-center top-initial left-initial"  id="transitionPanel" >
+								
+
+<div class="table"style="height: auto;background-color: white" >
+  <div class="table-row text-left color-dark"  >
+    <div class="table-col-2">Contry</div>
+    <div class="table-col-2">Total cases</div>
+    <div class="table-col-1">New Cases</div>
+    <div class="table-col-1">Total Deaths</div>
+    <div id="death"class="table-col-1">New Deaths</div>
+    <div class="table-col-2">Total Recovered</div>
+    <div class="table-col-2">Active Cases</div>
+    <div class="table-col-1">Serious, critical</div>
+    <div class="table-col-1">Tot Cases/ 1M pop</div>
+    <div class="table-col-1">Deaths/ 1M pop</div>
+    <div class="table-col-2">Total tests</div>
+    <div class="table-col-2">Tests/ 1M pop</div>
+    <div class="table-col-2">Population</div>
+  </div>
+  <div class="table-row text-left color-dark">
+    <div style="display:inline-block;" class="table-col-2 height-sm "><img style="width:15%" src="pays/be.png"> Belgium</div>
+    <div class="table-col-2">27 700 700</div>
+    <div class="table-col-1"></div>
+    <div class="table-col-1">504450</div>
+    <div class="table-col-1"></div>
+    <div class="table-col-2">18 513 654</div>
+    <div class="table-col-2">9 711 640</div>
+    <div class="table-col-1">21 435</div>
+    <div class="table-col-1">89 400</div>
+    <div class="table-col-1">1 684</div>
+    <div class="table-col-2">326 509 814</div>
+    <div class="table-col-2">989 909</div>
+    <div class="table-col-2">323 182 690</div>
+  </div>
+  <div class="table-row text-left color-dark">
+    <div style="display:inline-block;" class="table-col-2 height-sm "><img style="width:15%" src="pays/es.png"> Spain</div>
+    <div class="table-col-2">27 700 700</div>
+    <div class="table-col-1"></div>
+    <div class="table-col-1">500 40</div>
+    <div class="table-col-1"></div>
+    <div class="table-col-2">18 513 654</div>
+    <div class="table-col-2">9 711 640</div>
+    <div class="table-col-1">21 435</div>
+    <div class="table-col-1">89 400</div>
+    <div class="table-col-1">1 684</div>
+    <div class="table-col-2">326 509 814</div>
+    <div class="table-col-2">989 909</div>
+    <div class="table-col-2">323 182 690</div>
+  </div>
+  <div class="table-row text-left color-dark">
+    <div style="display:inline-block;" class="table-col-2 height-sm "><img style="width:15%" src="pays/ru.png"> Russia</div>
+    <div class="table-col-2">27 700 700</div>
+    <div class="table-col-1"></div>
+    <div class="table-col-1">500 40</div>
+    <div class="table-col-1"></div>
+    <div class="table-col-2">18 513 654</div>
+    <div class="table-col-2">9 711 640</div>
+    <div class="table-col-1">21 435</div>
+    <div class="table-col-1">89 400</div>
+    <div class="table-col-1">1 684</div>
+    <div class="table-col-2">326 509 814</div>
+    <div class="table-col-2">989 909</div>
+    <div class="table-col-2">323 182 690</div>
+  </div>
+  <div class="table-row text-left color-dark">
+    <div style="display:inline-block;" class="table-col-2 height-sm "><img style="width:15%" src="pays/gb.png"> UK</div>
+    <div class="table-col-2">27 700 700</div>
+    <div class="table-col-1"></div>
+    <div class="table-col-1">500 40</div>
+    <div class="table-col-1"></div>
+    <div class="table-col-2">18 513 654</div>
+    <div class="table-col-2">9 711 640</div>
+    <div class="table-col-1">21 435</div>
+    <div class="table-col-1">89 400</div>
+    <div class="table-col-1">1 684</div>
+    <div class="table-col-2">326 509 814</div>
+    <div class="table-col-2">989 909</div>
+    <div class="table-col-2">323 182 690</div>
+  </div>
+  <div class="table-row text-left color-dark">
+    <div style="display:inline-block;" class="table-col-2 height-sm "><img style="width:15%" src="pays/it.png"> Italy</div>
+    <div class="table-col-2">27 700 700</div>
+    <div class="table-col-1"></div>
+    <div class="table-col-1">500 40</div>
+    <div class="table-col-1"></div>
+    <div class="table-col-2">18 513 654</div>
+    <div class="table-col-2">9 711 640</div>
+    <div class="table-col-1">21 435</div>
+    <div class="table-col-1">89 400</div>
+    <div class="table-col-1">1 684</div>
+    <div class="table-col-2">326 509 814</div>
+    <div class="table-col-2">989 909</div>
+    <div class="table-col-2">323 182 690</div>
+  </div>
+  <div class="table-row text-left color-dark">
+    <div style="display:inline-block;" class="table-col-2 height-sm "><img style="width:15%" src="pays/pl.png"> Poland</div>
+    <div class="table-col-2">27 700 700</div>
+    <div class="table-col-1"></div>
+    <div class="table-col-1">500 40</div>
+    <div class="table-col-1"></div>
+    <div class="table-col-2">18 513 654</div>
+    <div class="table-col-2">9 711 640</div>
+    <div class="table-col-1">21 435</div>
+    <div class="table-col-1">89 400</div>
+    <div class="table-col-1">1 684</div>
+    <div class="table-col-2">326 509 814</div>
+    <div class="table-col-2">989 909</div>
+    <div class="table-col-2">323 182 690</div>
+  </div>
+  <div class="table-row text-left color-dark">
+    <div style="display:inline-block;" class="table-col-2 height-sm "><img style="width:15%" src="pays/fr.png"> France</div>
+    <div class="table-col-2">27 700 700</div>
+    <div class="table-col-1"></div>
+    <div class="table-col-1">500 40</div>
+    <div class="table-col-1"></div>
+    <div class="table-col-2">18 513 654</div>
+    <div class="table-col-2">9 711 640</div>
+    <div class="table-col-1">21 435</div>
+    <div class="table-col-1">89 400</div>
+    <div class="table-col-1">1 684</div>
+    <div class="table-col-2">326 509 814</div>
+    <div class="table-col-2">989 909</div>
+    <div class="table-col-2">323 182 690</div>
+  </div>
+  <div class="table-row text-left color-dark">
+    <div style="display:inline-block;" class="table-col-2 height-sm "><img style="width:15%" src="pays/pt.png"> Portugal</div>
+    <div class="table-col-2">27 700 700</div>
+    <div class="table-col-1"></div>
+    <div class="table-col-1">500 40</div>
+    <div class="table-col-1"></div>
+    <div class="table-col-2">18 513 654</div>
+    <div class="table-col-2">9 711 640</div>
+    <div class="table-col-1">21 435</div>
+    <div class="table-col-1">89 400</div>
+    <div class="table-col-1">1 684</div>
+    <div class="table-col-2">326 509 814</div>
+    <div class="table-col-2">989 909</div>
+    <div class="table-col-2">323 182 690</div>
+  </div>
+  <div class="table-row text-left color-dark">
+    <div style="display:inline-block;" class="table-col-2 height-sm "><img style="width:15%" src="pays/se.png"> Sweden</div>
+    <div class="table-col-2">27 700 700</div>
+    <div class="table-col-1"></div>
+    <div class="table-col-1">500 40</div>
+    <div class="table-col-1"></div>
+    <div class="table-col-2">18 513 654</div>
+    <div class="table-col-2">9 711 640</div>
+    <div class="table-col-1">21 435</div>
+    <div class="table-col-1">89 400</div>
+    <div class="table-col-1">1 684</div>
+    <div class="table-col-2">326 509 814</div>
+    <div class="table-col-2">989 909</div>
+    <div class="table-col-2">323 182 690</div>
+  </div>
+  <div class="table-row text-left color-dark">
+    <div style="display:inline-block;" class="table-col-2 height-sm "><img style="width:15%" src="pays/tr.png"> Turkey</div>
+    <div class="table-col-2">27 700 700</div>
+    <div class="table-col-1"></div>
+    <div class="table-col-1">500 40</div>
+    <div class="table-col-1"></div>
+    <div class="table-col-2">18 513 654</div>
+    <div class="table-col-2">9 711 640</div>
+    <div class="table-col-1">21 435</div>
+    <div class="table-col-1">89 400</div>
+    <div class="table-col-1">1 684</div>
+    <div class="table-col-2">326 509 814</div>
+    <div class="table-col-2">989 909</div>
+    <div class="table-col-2">323 182 690</div>
+  </div>
+  <div class="table-row text-left color-dark">
+    <div style="display:inline-block;" class="table-col-2 height-sm "><img style="width:15%" src="pays/de.png"> Germany</div>
+    <div class="table-col-2">27 700 700</div>
+    <div class="table-col-1"></div>
+    <div class="table-col-1">500 40</div>
+    <div class="table-col-1"></div>
+    <div class="table-col-2">18 513 654</div>
+    <div class="table-col-2">9 711 640</div>
+    <div class="table-col-1">21 435</div>
+    <div class="table-col-1">89 400</div>
+    <div class="table-col-1">1 684</div>
+    <div class="table-col-2">326 509 814</div>
+    <div class="table-col-2">989 909</div>
+    <div class="table-col-2">323 182 690</div>
+  </div>
+  <div class="table-row text-left color-dark">
+    <div style="display:inline-block;" class="table-col-2 height-sm "><img style="width:15%" src="pays/ua.png"> Ukrain</div>
+    <div class="table-col-2">27 700 700</div>
+    <div class="table-col-1"></div>
+    <div class="table-col-1">500 40</div>
+    <div class="table-col-1"></div>
+    <div class="table-col-2">18 513 654</div>
+    <div class="table-col-2">9 711 640</div>
+    <div class="table-col-1">21 435</div>
+    <div class="table-col-1">89 400</div>
+    <div class="table-col-1">1 684</div>
+    <div class="table-col-2">326 509 814</div>
+    <div class="table-col-2">989 909</div>
+    <div class="table-col-2">323 182 690</div>
+  </div>
+  <div class="table-row text-left color-dark">
+    <div style="display:inline-block;" class="table-col-2 height-sm "><img style="width:15%" src="pays/ro.png"> Romania</div>
+    <div class="table-col-2">27 700 700</div>
+    <div class="table-col-1"></div>
+    <div class="table-col-1">500 40</div>
+    <div class="table-col-1"></div>
+    <div class="table-col-2">18 513 654</div>
+    <div class="table-col-2">9 711 640</div>
+    <div class="table-col-1">21 435</div>
+    <div class="table-col-1">89 400</div>
+    <div class="table-col-1">1 684</div>
+    <div class="table-col-2">326 509 814</div>
+    <div class="table-col-2">989 909</div>
+    <div class="table-col-2">323 182 690</div>
+  </div>
+  </div>
+</div></div></div>
+
+    </div>
+  </div>
+
+  <div class="tab-item primary border-sm border-accent-4 height-lg" id="na" style="height: auto;border: none;width:1350px">
+    <div class="area" >
+     
+					<div class="content-row" >
+						<div id="tableau1"class="content-col-18 container height-lg  respond-bp-3-under" >
+							<div class="area   text-center top-initial left-initial"  id="transitionPanel" >
+								
+<div class="table"style="height: auto;background-color: white" >
+  <div class="table-row text-left color-dark"  >
+    <div class="table-col-2">Contry</div>
+    <div class="table-col-2">Total cases</div>
+    <div class="table-col-1">New Cases</div>
+    <div class="table-col-1">Total Deaths</div>
+    <div id="death"class="table-col-1">New Deaths</div>
+    <div class="table-col-2">Total Recovered</div>
+    <div class="table-col-2">Active Cases</div>
+    <div class="table-col-1">Serious, critical</div>
+    <div class="table-col-1">Tot Cases/ 1M pop</div>
+    <div class="table-col-1">Deaths/ 1M pop</div>
+    <div class="table-col-2">Total tests</div>
+    <div class="table-col-2">Tests/ 1M pop</div>
+    <div class="table-col-2">Population</div>
+  </div>
+  <div class="table-row text-left color-dark">
+    <div style="display:inline-block;" class="table-col-2 height-sm "><img style="width:15%" src="pays/us.png"> Usa</div>
+    <div class="table-col-2">29,653,891</div>
+    <div class="table-col-1"></div>
+    <div class="table-col-1">537,119</div>
+    <div class="table-col-1"></div>
+    <div class="table-col-2">20,273,915</div>
+    <div class="table-col-2">8,842,857</div>
+    <div class="table-col-1">13,405</div>
+    <div class="table-col-1">89,233</div>
+    <div class="table-col-1">1,614</div>
+    <div class="table-col-2">368,092,273</div>
+    <div class="table-col-2">1,107,643</div>
+    <div class="table-col-2">332,320,317</div>
+  </div>
+  <div class="table-row text-left color-dark">
+    <div style="display:inline-block;" class="table-col-2 height-sm "><img style="width:15%" src="pays/mx.png"> Mexico</div>
+    <div class="table-col-2">2,125,866</div>
+    <div class="table-col-1">+6,561</div>
+    <div class="table-col-1">190,357</div>
+    <div class="table-col-1">+799</div>
+    <div class="table-col-2">1,66,658</div>
+    <div class="table-col-2">268,851</div>
+    <div class="table-col-1">4,798</div>
+    <div class="table-col-1">16,372</div>
+    <div class="table-col-1">1,466</div>
+    <div class="table-col-2">5,608,961</div>
+    <div class="table-col-2">43,196</div>
+    <div class="table-col-2">129,850,313</div>
+  </div>
+  <div class="table-row text-left color-dark">
+    <div style="display:inline-block;" class="table-col-2 height-sm "><img style="width:15%" src="pays/ca.png"> Canada</div>
+    <div class="table-col-2">884,086</div>
+    <div class="table-col-1"></div>
+    <div class="table-col-1">22,213</div>
+    <div class="table-col-1"></div>
+    <div class="table-col-2">831,896</div>
+    <div class="table-col-2">29,977</div>
+    <div class="table-col-1">572</div>
+    <div class="table-col-1">23,286</div>
+    <div class="table-col-1">585</div>
+    <div class="table-col-2">25,066,354</div>
+    <div class="table-col-2">660,223</div>
+    <div class="table-col-2">37,966,492</div>
+  </div>
+  <div class="table-row text-left color-dark">
+    <div style="display:inline-block;" class="table-col-2 height-sm "><img style="width:15%" src="pays/pa.png"> Panama</div>
+    <div class="table-col-2">344,477</div>
+    <div class="table-col-1"></div>
+    <div class="table-col-1">5,910</div>
+    <div class="table-col-1"></div>
+    <div class="table-col-2">331,233</div>
+    <div class="table-col-2">7,334</div>
+    <div class="table-col-1">195</div>
+    <div class="table-col-1">78,997</div>
+    <div class="table-col-1">1,355</div>
+    <div class="table-col-2">2,000,000</div>
+    <div class="table-col-2">450,000</div>
+    <div class="table-col-2">4,360,653</div>
+  </div>
+  <div class="table-row text-left color-dark">
+    <div style="display:inline-block;" class="table-col-2 height-sm "><img style="width:15%" src="pays/do.png"> Dominican Republic</div>
+    <div class="table-col-2">27 700 700</div>
+    <div class="table-col-1"></div>
+    <div class="table-col-1">500 40</div>
+    <div class="table-col-1"></div>
+    <div class="table-col-2">18 513 654</div>
+    <div class="table-col-2">9 711 640</div>
+    <div class="table-col-1">21 435</div>
+    <div class="table-col-1">89 400</div>
+    <div class="table-col-1">1 684</div>
+    <div class="table-col-2">326 509 814</div>
+    <div class="table-col-2">989 909</div>
+    <div class="table-col-2">323 182 690</div>
+  </div>
+  <div class="table-row text-left color-dark">
+    <div style="display:inline-block;" class="table-col-2 height-sm "><img style="width:15%" src="pays/cr.png"> Costa Rica</div>
+    <div class="table-col-2">27 700 700</div>
+    <div class="table-col-1"></div>
+    <div class="table-col-1">500 40</div>
+    <div class="table-col-1"></div>
+    <div class="table-col-2">18 513 654</div>
+    <div class="table-col-2">9 711 640</div>
+    <div class="table-col-1">21 435</div>
+    <div class="table-col-1">89 400</div>
+    <div class="table-col-1">1 684</div>
+    <div class="table-col-2">326 509 814</div>
+    <div class="table-col-2">989 909</div>
+    <div class="table-col-2">323 182 690</div>
+  </div>
+  <div class="table-row text-left color-dark">
+    <div style="display:inline-block;" class="table-col-2 height-sm "><img style="width:15%" src="pays/gt.png"> Guatemala</div>
+    <div class="table-col-2">27 700 700</div>
+    <div class="table-col-1"></div>
+    <div class="table-col-1">500 40</div>
+    <div class="table-col-1"></div>
+    <div class="table-col-2">18 513 654</div>
+    <div class="table-col-2">9 711 640</div>
+    <div class="table-col-1">21 435</div>
+    <div class="table-col-1">89 400</div>
+    <div class="table-col-1">1 684</div>
+    <div class="table-col-2">326 509 814</div>
+    <div class="table-col-2">989 909</div>
+    <div class="table-col-2">323 182 690</div>
+  </div>
+  <div class="table-row text-left color-dark">
+    <div style="display:inline-block;" class="table-col-2 height-sm "><img style="width:15%" src="pays/hn.png"> Honduras</div>
+    <div class="table-col-2">27 700 700</div>
+    <div class="table-col-1"></div>
+    <div class="table-col-1">500 40</div>
+    <div class="table-col-1"></div>
+    <div class="table-col-2">18 513 654</div>
+    <div class="table-col-2">9 711 640</div>
+    <div class="table-col-1">21 435</div>
+    <div class="table-col-1">89 400</div>
+    <div class="table-col-1">1 684</div>
+    <div class="table-col-2">326 509 814</div>
+    <div class="table-col-2">989 909</div>
+    <div class="table-col-2">323 182 690</div>
+  </div>
+  <div class="table-row text-left color-dark">
+    <div style="display:inline-block;" class="table-col-2 height-sm "><img style="width:15%" src="pays/cu.png"> Cuba</div>
+    <div class="table-col-2">27 700 700</div>
+    <div class="table-col-1"></div>
+    <div class="table-col-1">500 40</div>
+    <div class="table-col-1"></div>
+    <div class="table-col-2">18 513 654</div>
+    <div class="table-col-2">9 711 640</div>
+    <div class="table-col-1">21 435</div>
+    <div class="table-col-1">89 400</div>
+    <div class="table-col-1">1 684</div>
+    <div class="table-col-2">326 509 814</div>
+    <div class="table-col-2">989 909</div>
+    <div class="table-col-2">323 182 690</div>
+  </div>
+  <div class="table-row text-left color-dark">
+    <div style="display:inline-block;" class="table-col-2 height-sm "><img style="width:15%" src="pays/jm.png"> Jamaica</div>
+    <div class="table-col-2">27 700 700</div>
+    <div class="table-col-1"></div>
+    <div class="table-col-1">500 40</div>
+    <div class="table-col-1"></div>
+    <div class="table-col-2">18 513 654</div>
+    <div class="table-col-2">9 711 640</div>
+    <div class="table-col-1">21 435</div>
+    <div class="table-col-1">89 400</div>
+    <div class="table-col-1">1 684</div>
+    <div class="table-col-2">326 509 814</div>
+    <div class="table-col-2">989 909</div>
+    <div class="table-col-2">323 182 690</div>
+  </div>
+  <div class="table-row text-left color-dark">
+    <div style="display:inline-block;" class="table-col-2 height-sm "><img style="width:15%" src="pays/ni.png"> El Salvador</div>
+    <div class="table-col-2">27 700 700</div>
+    <div class="table-col-1"></div>
+    <div class="table-col-1">500 40</div>
+    <div class="table-col-1"></div>
+    <div class="table-col-2">18 513 654</div>
+    <div class="table-col-2">9 711 640</div>
+    <div class="table-col-1">21 435</div>
+    <div class="table-col-1">89 400</div>
+    <div class="table-col-1">1 684</div>
+    <div class="table-col-2">326 509 814</div>
+    <div class="table-col-2">989 909</div>
+    <div class="table-col-2">323 182 690</div>
+  </div>
+  <div class="table-row text-left color-dark">
+    <div style="display:inline-block;" class="table-col-2 height-sm "><img style="width:15%" src="pays/ht.png"> Haiti</div>
+    <div class="table-col-2">27 700 700</div>
+    <div class="table-col-1"></div>
+    <div class="table-col-1">500 40</div>
+    <div class="table-col-1"></div>
+    <div class="table-col-2">18 513 654</div>
+    <div class="table-col-2">9 711 640</div>
+    <div class="table-col-1">21 435</div>
+    <div class="table-col-1">89 400</div>
+    <div class="table-col-1">1 684</div>
+    <div class="table-col-2">326 509 814</div>
+    <div class="table-col-2">989 909</div>
+    <div class="table-col-2">323 182 690</div>
+  </div>
+  <div class="table-row text-left color-dark">
+    <div style="display:inline-block;" class="table-col-2 height-sm "><img style="width:15%" src="pays/bz.png"> Belize</div>
+    <div class="table-col-2">27 700 700</div>
+    <div class="table-col-1"></div>
+    <div class="table-col-1">500 40</div>
+    <div class="table-col-1"></div>
+    <div class="table-col-2">18 513 654</div>
+    <div class="table-col-2">9 711 640</div>
+    <div class="table-col-1">21 435</div>
+    <div class="table-col-1">89 400</div>
+    <div class="table-col-1">1 684</div>
+    <div class="table-col-2">326 509 814</div>
+    <div class="table-col-2">989 909</div>
+    <div class="table-col-2">323 182 690</div>
+  </div>
+  </div>
+</div></div></div>
+
+    </div>
+  </div>
+</div>
+
+<!---->
+</div></div></div></div></div>
+<!-- update-->
+
+<br><br><br><br>
+
+<h1 >Archived:February 2020 Coronavirus News Updates</h1>
+<button type="button" class="button-sm button-accent-1" style=" margin-left: 88px"id="showModal">January Timeline:</button>
+<div id="modal1" class="modal">
+  <div class="modal-md modal-top-center modal-auto-stretch accent-1-light">
+      <div class="form-row">
+        <div class="form-col-20">
+          <div class="body">
+            <div class="content-col-20">
+              <div class="panel border-sm border-muted">
+                <div class="content-row">
+                  <div class="content-col-20">
+                    <ul><li><p>On January 31, the first 2 novel coronavirus cases in the UK, [18] the first 2 cases in Russia, [20] and the first case in Sweden and in Spain were reported. Canada reported its 4th case.</p></li><br>
+                    <li><p>On Jan. 31, the United States</p></li><br>
+                    <ul>
+                     <li> declared Coronavirus a Public Health Emergency</li>
+                      <li>issued 14 days quarantine rules for US citizens entering the US from China (mandatory if entering from the Hubei province).</li>
+                      <li>issued an order to deny entry to foreigners who have traveled to China within the past two weeks.</li>
+                    </ul>
+                      <li><p>On January 30, the novel coronavirus total case count surpassed that for SARS (which affected 8,096 people worldwide).</p></li>
+                      <li><p>On January 30, the World Health Organization declared the coronavirus outbreak a Global Public Health Emergency.</p></li>
+                      <li><p>On January 30 CDC confirmed the first US case of human to human transmission[17].</p>
+                      <li><p>Germany, Japan, Vietnam and the United States have reported cases in patients who didn't personally visit China, but contracted the virus from someone else who had visited Wuhan, China[15]. These cases of human to human transmission are the most worrisome, according to the WHO[16].</p></li>
+                     <li><p> Wuhan (the city where the virus originated) is the largest city in Central China, with a population of over 11 million people. The city, on January 23, shut down transport links. Following Wuhan lock down, the city of Huanggang was also placed in quarantine, and the city of Ezhou closed its train stations. This means than 18 million people have been placed in isolation. The World Health Organization (WHO) said cutting off a city as large as Wuhan is "unprecedented in public health history."[12] and praised China for its incredible commitment to isolate the virus and minimize the spread to other countries.</p></li>
+                    </ul>
+                    </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+  </div>  
+</div>
+
+<div id="tabs11" class="tabs " >
+  <div class="control-group text-sm">
+    <button type="button" data-target="#tab11" class="tab-activator menu-button  transition-long rounded-top-sm " style="background-color:white;border-style:none none solid none">Last updates</button>
+    <button type="button" data-target="#tab22" class="tab-activator menu-button tab-activator-hover-warning-light  transition-long rounded-top-sm " style="background-color:white;border-style:none none solid none" >More Info</button>
+    <!--<button type="button" data-target="#tab33" class="tab-activator menu-button  transition-long rounded-top-sm " style="background-color:white;border-style:none none solid none;">Info 3</button>-->
+  </div>
+  <div class="tab-item primary border-sm border-accent-4 height-lg" id="tab11" style="height: auto;border: none">
+    <div class="area" style="overflow: auto">
+     
+      <div class="tete">
+
+        <div class ="test">
+            <div class="panel text-center text-align  height-md" style="border: 8px solid #CCCC00;margin:10 10 10 10;">
+        		How dangerous is the virus?
+
+            </div>
+            <div style="padding:10 10 10 10;">
+            There are three parameters to understand in order to assess the magnitude of the risk posed by this novel coronavirus:<br>
+
+			- ransmission Rate (Ro) <br>
+			- number of newly infected people from a single case<br>
+			- Case Fatality Rate (CFR) <br>
+			- percent of cases that result in death Determine whether asymptomatic transmission is possible
+			</div>
+        </div>
+        <div class ="test">
+        	<div class="panel text-center text-align  height-md" style="border: 8px solid #CCCC00;margin:10 10 10 10;">
+        		How contagious is the Wuhan Coronavirus? (Ro)
+    		</div>
+    		<div style="padding:10 10 10 10;">
+			The attack rate or transmissibility (how rapidly the disease spreads) of a virus is indicated by its reproductive number (Ro, pronounced R-nought or r-zero), which represents the average number of people to which a single infected person will transmit the virus.
+
+			WHO's estimated (on Jan. 23) Ro to be between 1.4 and 2.5. [13]
+
+			Other studies have estimated a Ro between 3.6 and 4.0, and between 2.24 to 3.58. [23].
+
+			Preliminary studies had estimated Ro to be between 1.5 and 3.5. [5][6][7]
+
+			An outbreak with a reproductive number of below 1 will gradually disappear.
+
+			For comparison, the Ro for the common flu is 1.3 and for SARS it was 2.0.
+        	</div>  
+      
+        </div>
+        <div class ="test" >
+          <div class="panel text-center text-align  height-md" style="border: 8px solid #CCCC00;margin:10 10 10 10;">
+       		Fatality Rate (case fatality ratio or CFR) of the Wuhan Coronavirus
+          </div>
+          <div style="padding:10 10 10 10;">
+          	See full details: Coronavirus Fatality Rate
+
+			The novel coronavirus' case fatality rate has been estimated at around 2%, in the WHO press conference held on January 29, 2020 [16] . However, it noted that, without knowing how many were infected, it was too early to be able to put a percentage on the mortality rate figure.
+
+			A prior estimate [9] had put that number at 3%.
+
+			Fatality rate can change as a virus can mutate, according to epidemiologists.
+
+			For comparison, the case fatality rate for SARS was 10%, and for MERS 34%.
+		</div>
+
+      </div>
+    </div></div>
+</div>
+  
+
+
+
+  <div class="tab-item primary border-sm border-accent-4 height-lg" id="tab22" style="height: auto;border: none;overflow: auto">
+    <div class="area" style="overflow: auto">
+     
+      <div class="tete">
+
+        <div class ="test">
+            <div class="panel text-center text-align  height-md" style="border: 8px solid #CCCC00;margin:10 10 10 10;">
+        		Age and conditions of Coronavirus cases
+            </div>
+          	<div class="text1" style="padding:10 10 10 10;">
+            	
+            	See latest findings: Age, Sex, Demographics of COVID-19 Cases and Deaths
+
+				According to early estimates by China's National Health Commission (NHC), about 80% of those who died were over the age of 60 and 75% of them had pre-existing health conditions such as cardiovascular diseases and diabetes.[24]
+
+				According to the WHO Situation Report no. 7 issued on Jan. 27:
+
+				The median age of cases detected outside of China is 45 years, ranging from 2 to 74 years.71% of cases were male.
+				A study of 138 hospitalized patients with NCIP found that the median age was 56 years (interquartile range, 42-68; range, 22-92 years) and 75 (54.3%) were men.[25]
+
+				The WHO, in its Myth busters FAQs, addresses the question: "Does the new coronavirus affect older people, or are younger people also susceptible?" by answering that:
+
+				<details  >
+					<div class=""style="overflow: auto;height: 145px">People of all ages can be infected by the novel coronavirus COVID-19.
+				Older people, and people with pre-existing medical conditions (such as asthma, diabetes, heart disease) appear to be more vulnerable to becoming severely ill with the virus.
+				Patient who died in the Philippines was a 44-year old male. The patient who died in the Philippines on February 2, in what was the first death occurring outside of China, was a 44-year-old Chinese man from Wuhan who was admitted on Jan. 25 after experiencing fever, cough, and sore throat, before developing severe pneumonia.n the last few days, “the patient was stable and showed signs of improvement, however, the condition of the patient deteriorated within his last 24 hours resulting in his demise." according to the Philippine Department of Health.
+				Serious Cases of 30 year old patients in France
+				As of Jan. 29, according to French authorities, the conditions of the two earliest Paris cases had worsened and the patients were being treated in intensive care, according to French authorities. The patients have been described as a young couple aged 30 and 31 years old, both Chinese citizens from Wuhan who were asymptomatic when they arrived in Paris on January 18 [19].
+
+				Age and Sex of the first deaths as reported by the China National Health Commission (NHC)
+				The NHC reported the details of the first 17 deaths up to 24 pm on January 22, 2020. The deaths included 13 males and 4 females. The median age of the deaths was 75 (range 48-89) years.[21]</div></details>
+
+
+			</div>
+        </div>
+        <div class ="test">
+         <div class="text1" >
+         	 <div class="panel text-center text-align  height-md"style="border: 8px solid #CCCC00;margin:10 10 10 10;">
+        WHO Risk Assessment: Global Emergency
+
+          </div>
+           <div style="padding:10 10 10 10;">
+			See full details: WHO coronavirus updates
+
+			On January 30, the World Health Organization declared the coronavirus outbreak a Global Public Health Emergency.
+
+			For more information from the WHO regarding novel coronavirus: WHO page on Novel Coronavirus (2019-nCoV)
+			</div>
+
+           </div>
+        
+        </div>
+        <div class ="test" >
+          <div class="panel text-center text-align  height-md"style="border: 8px solid #CCCC00;margin:10 10 10 10;">
+        Comparisons:
+
+          </div>
+          <div style="padding:10 10 10 10;">
+          Every year an estimated 290,000 to 650,000 people die in the world due to complications from seasonal influenza (flu) viruses. This figure corresponds to 795 to 1,781 deaths per day due to the seasonal flu.
+		  SARS (November 2002 to July 2003): was a coronavirus that originated from Beijing, China, spread to 29 countries, and resulted in 8,096 people infected with 774 deaths (fatality rate of 9.6%). Considering that SARS ended up infecting 5,237 people in mainland China, Wuhan Coronavirus surpassed SARS on January 29, 2020, when Chinese officials confirmed 5,974 cases of the novel coronavirus (2019-nCoV). One day later, on January 30, 2020 the novel coronavirus cases surpassed even the 8,096 cases worldwide which were the final SARS count in 2003.MERS (in 2012) killed 858 people out of the 2,494 infected (fatality rate of 34.4%).
+        </div>
+    </div>
+
+      </div>
+    </div>
+</div><!--
+    <div class="tab-item primary border-sm border-accent-4 height-lg" id="tab33" style="height: auto;border: none">
+    <div class="area" style="overflow: auto">
+     
+      <div class="tete">
+
+        <div class ="test">
+            <div class="panel text-center text-align  height-md
+"style="border: 8px solid #CCCC00;margin:10 10 10 10;">
+        Heading
+            </div>
+        </div>
+        <div class ="test">
+          <div class="panel text-center text-align  height-md
+"style="border: 8px solid #CCCC00;margin:10 10 10 10;">
+        Heading
+          </div>
+        
+        </div>
+        <div class ="test" >
+          <div class="panel text-center text-align  height-md
+"style="border: 8px solid #CCCC00;margin:10 10 10 10;">
+        Heading
+          </div>
+        </div>
+
+      </div>
+    </div></div>
+  -->
+
+  
+
+</div>
+<!-- numero-> <a>-->
+<div class="toggle-container" data-transition-duration="1000" data-transition-type="collapse"id="info" >
+    <div class="content-col-20">
+      <button data-target="#panel1" class="toggle-activator menu-button menu-button-accent-1 transition-long height-sm">Coronavirus Worldometer Sections</button>
+      <div id="panel1" class="toggle-item hidden">
+        <div class="panel border-sm border-accent-1 width-full">
+          <ul>
+            <li><a href="#">Coronavirus Update</a></li>
+            <li><a href="#">Case statistics and graphs</a></li>
+            <li><a href="#">Death statistics and graphs</a></li>
+            <li><a href="#">Mortality Rate</a></li>
+            <li><a href="#">Incubation Period</a></li>
+            <li><a href="#">Age, Sex,Existiong Condition</a></li>
+            <li><a href="#">Countries with cases: basic list- detailed list</a></li>
+          </ul>
+        </div>
+        <div class="row-spacing-xs"></div>
+      </div>
+      <div class="row-spacing-xs"></div>     
+      <button data-target="#panel2" class="toggle-activator menu-button menu-button-accent-1 transition-long height-sm">More info</button>
+      <div id="panel2" class="toggle-item">
+        <div class="panel border-sm border-accent-1 width-full">
+         <ul>
+          <li><span style="color: blue;">Novel coronavirus outbreak may reach peak in one week or about 10 days: expert</span> - Xinhua,Jan.28 ,2020 </li>
+           <li><span style="color: blue;">China's Xi Jinping pledges to evercome 'devil' coronavirus</span> - Financial Times,Jan.28 ,2020 </li>
+           <li><span style="color: blue;">Clinical features of patients infected with 2019 novel coronavirus in Wuhan,China</span> -The Lancet,Jan.24,2020 </li>
+           <li><span style="color: blue;">The Age, Sex and Symptoms of China's Coronavirus Victims</span> - Bloomberg,Jan. 23 ,2020 </li>
+         </ul>
+        </div>
+        <div class="row-spacing-xs"></div>
+      </div>
+      <div class="row-spacing-xs"></div>
+      <button data-target="#panel3" class="toggle-activator menu-button menu-button-accent-1 transition-long height-sm">Sources</button>
+      <div id="panel3" class="toggle-item hidden">
+        <div class="panel border-sm border-accent-1 width-full">
+          <ol><li>Novel Coronavirus (2019-nCoV) situation reports - World Health Organization (WHO)</li>
+<li>2019 Novel Coronavirus (2019-nCoV) in the U.S. -. U.S. Centers for Disease Control and Prevention (CDC)</li>
+<li>Outbreak Notification - National Health Commission (NHC) of the People’s Republic of China</li>
+<li>Novel coronavirus (2019-nCoV) - Australian Government Department of Health</li>
+<li>Novel coronavirus 2019-nCoV: early estimation of epidemiological parameters and epidemic prediction - Jonathan M. Read et al, Jan. 23,2020.</li>
+<li>Early Transmissibility Assessment of a Novel Coronavirus in Wuhan, China - Maimuna Majumder and Kenneth D. Mandl, Harvard University - Computational Health Informatics Program - Posted: 24 Jan 2020 Last revised: 27 Jan 2020</li>
+<li>Report 3: Transmissibility of 2019-nCoV - 25 January 2020 - Imperial College London‌</li>
+<li>Case fatality risk of influenza A(H1N1pdm09): a systematic review - Epidemiology. Nov. 24, 2013</li>
+<li>A novel coronavirus outbreak of global health concern - Chen Want et al. The Lancet. January 24, 2020</li>
+<li>Symptoms of Novel Coronavirus (2019-nCoV) - CDC</li>
+<li>China's National Health Commission news conference on coronavirus - Al Jazeera. January 26, 2020</li>
+<li>Wuhan lockdown 'unprecedented', shows commitment to contain virus: WHO representative in China - Reuters. January 23, 2020</li>
+<li>Statement on the meeting of the International Health Regulations (2005) Emergency Committee regarding the outbreak of novel coronavirus (2019-nCoV) - WHO, January 23, 2020</li>
+<li>International Health Regulations Emergency Committee on novel coronavirus in China - WHO, January 30, 2020</li>
+<li>Human-to-human transmission of Wuhan virus outside of China, confirmed in Germany, Japan and Vietnam - The Online Citizen, Jan. 29, 2020</li>
+<li>Who: "Live from Geneva on the new #coronavirus outbreak"</li>
+<li>CDC Confirms Person-to-Person Spread of New Coronavirus in the United States - CDC Press Release, Jan. 30, 2020</li>
+<li>CMO confirms cases of coronavirus in England - CMO, UK, Jan. 31, 2020</li>
+<li>Coronavirus in France: what you need to know - The Local France, Jan. 31, 2020</li>
+<li>First two persons infected with coronavirus identified in Russia - Tass, Jan. 31, 2020</li>
+<li>Updated understanding of the outbreak of 2019 novel coronavirus (2019nCoV) in Wuhan, China - Journal of Medical Virology, Jan. 29, 2020</li>
+<li>Estimating the effective reproduction number of the 2019-nCoV in China - Zhidong Cao et al., Jan. 29, 2020</li>
+<li>Preliminary estimation of the basic reproduction number of novel coronavirus (2019-nCoV) in China, from 2019 to 2020: A data-driven analysis in the early phase of the outbreak - Jan. 30, 2020</li>
+<li>Coronavirus: Window of opportunity to act, World Health Organization says - BBC, Feb,\. 4, 2020</li>
+<li>Clinical Characteristics of 138 Hospitalized Patients With 2019 Novel Coronavirus–Infected Pneumonia in Wuhan, China - Wang et. al, JAMA, Feb. 7, 2020</li>
+</ol>
+        </div>
+        <div class="row-spacing-xs"></div>
+      </div>
+    </div>
+  </div>  
+
+
+
+		
+				
+<br><br>
+
+<script src="js/webui-components.min.js"></script>
+<script src="style.js"></script>
+</body>
+</html>
